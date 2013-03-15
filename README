@@ -1,0 +1,37 @@
+To compile the code
+
+cilk++ -O3 parallel_bfs.cpp -lcilkutil 
+
+To run the code
+
+./a.out < input_file.in > output_file.out
+
+Note:
+Sample input and output files can be found in the same directory.
+Cilk++ can be downloaded from the downloads tab.
+Details of the algorithm used can be found in the pdf.
+
+Performance improvement
+----------------------------------
+Graph Serial_BFS Parallel_BFS Speed _up
+
+cage15 1101s 173s 6.36
+cage14 1707s 47s 36.31
+freescale 1869s 56s 33.37
+Wikipedia 618s 115s 5.37
+kkt-power 116s 3s 38.66
+RMAT100m 2782s 433s 6.42
+RMAT1B 15496s 2482s 6.24
+
+
+Details of the graphs tested on
+------------------------
+Graph : Number of Vertices : Number of Edges
+
+cage15 5.2M 99.2M
+cage14 15.1M 27.1M
+freescale 3.4M 18.9M
+Wikipedia 3.6M 45M
+kkt-power 2M 8.1M
+RMAT100M 10M 100M
+RMAT1B 10M 1B
